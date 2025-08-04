@@ -24,8 +24,8 @@ if ingredients_list:
     for fruit_chosen in ingredients_list:
         ingredients_string+=fruit_chosen + ' '
 
-    my_insert_stmt="""insert into smoothies.public.fruit_options(ingredients)
-                 values(''"""+ingredients_string+""""',"""+name_on_order+""")"""
+    my_insert_stmt = "insert into smoothies.public.fruit_options(ingredients) values ('" + ingredients_string + "', '" + name_on_order + "')"
+
     time_to_insert=st.button("submit order")
 
     if ingredients_string:
